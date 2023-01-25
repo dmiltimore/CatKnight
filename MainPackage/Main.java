@@ -1,8 +1,11 @@
+package MainPackage;
+import javax.swing.JFrame;
+
 public class Main {
 
     public static void main(String[] theArgs) {
 
-        Jframe window = new JFrame();
+        JFrame window = new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //can close window
         window.setResizable(false); //cannot resize
         window.setTitle("2D Adventure");
@@ -14,6 +17,8 @@ public class Main {
 
         window.setLocationRelativeTo(null); //no specific window location, goes to center
         window.setVisible(true); // can see window
+
+        gamePanel.startGameThread();
 
     }
 }
